@@ -1,0 +1,10 @@
+.body {
+    background-color: black;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+.login {
+    background-color: blue;
+}
