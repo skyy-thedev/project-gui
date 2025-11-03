@@ -1,10 +1,35 @@
 body {
-    background-color: black;
+    background: linear-gradient(90deg, #cdde82, #1f2c11 50%);
     text-align: center;
     color: white;
-    margin: 0 auto;
+    margin: 0 auto; 
+    align-items: center;
+    justify-content: center;
+    display: flex; /*&*/
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .login {
-    background-color: blue;
+    background: linear-gradient(45deg, #3c4042, #313031 50%);
+    border-radius: 15px;
+    border: 6px solid rgb(245, 195, 213);
+    width: 30vw;
+    height: 45vh;
+
+}
+
+input {
+  text-align: center;
+  width: 40%;
+  border: 1px solid rgba(138, 43, 226, 0.4);
+  border-radius: 12px;
+  background: rgba(153, 80, 221, 0.25);
+  color: white;
+  padding: 12px 15px;
+  margin: 12px 0;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
