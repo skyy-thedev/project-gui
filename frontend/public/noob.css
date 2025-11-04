@@ -13,24 +13,46 @@ body {
 }
 
 .login {
-  
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    align-items: center;
     color:white;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: linear-gradient(360deg, #415763, #58920c 80%);
     border-radius: 15px;
     border: 6px solid rgba(14, 14, 14, 0.495);
-    width: 30vw;
-    height: 45vh;
+    width: 35vw;
+    height: 48vh;
+    backdrop-filter: blur(10px) saturate(140%);
+    overflow: hidden; 
+}
 
+.login::before{
+    content: "";
+    position: relative ;
+    inset: 0;
+    background-image: url('logo.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+}
+.login:hover::before{
+  opacity: 1;
 }
 
 input {
+  z-index: 2;
   text-align: center;
   width: 40%;
   border: 4px solid rgba(98, 46, 109, 0.255);
   border-radius: 12px;
   background: rgba(244, 243, 246, 0.93);
-  color: white;
+  color: rgb(18, 18, 18);
   padding: 12px 15px;
   margin: 12px 0;
   outline: none;
@@ -41,6 +63,7 @@ input {
 }
 
 #send-btn{
+  position: relative;
   color:white;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 1px;
