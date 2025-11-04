@@ -95,9 +95,28 @@ body::after {
   animation: fadeInUp 0.8s ease forwards;
   transform-style: preserve-3d;
 }
+
 .login:hover {
-  transform: scale(1.02);
+  transform: scale(1.2);
   box-shadow: 0 8px 20px rgba(155, 93, 229, 0.2);
+}
+
+.login p {
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+.login a {
+  color: #9b4fff;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b780fe;
 }
 
 /* ================= INPUTS ================= */
@@ -212,10 +231,11 @@ input:-webkit-autofill {
   height: auto;
   font-size: 10px;
   z-index: 1000;
-  pointer-events: none; /* não interfere nos cliques */
   animation: logoPulse 2.5s infinite alternate;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  cursor: pointer;
+  text-decoration-line: none;
 }
 
 .logo-container.visible {

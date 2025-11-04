@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
+import { useLocation } from "wouter";
 
 function Inicio() {
   const [theme, setTheme] = useState("noob");
   const [stars, setStars] = useState([]);
-  const [showLogo, setShowLogo] = useState(false); // controle do delay do logo
+  const [showLogo, setShowLogo] = useState(false);
+  const [, setLocation] = useLocation();
+
+  // Constantes temporárias para simular login
+  const USER = "admin";
+  const PASS = "1234";
 
   // Alterna tema
   useEffect(() => {
@@ -29,17 +35,31 @@ function Inicio() {
     setStars(newStars);
   }, []);
 
-  // Delay de exibição do logo
+  // Delay para exibir o logo
   useEffect(() => {
     if (theme === "pro") {
-      const timer = setTimeout(() => setShowLogo(true), 5000); // 5s delay
+      const timer = setTimeout(() => setShowLogo(true), 1200);
       return () => clearTimeout(timer);
     } else {
-      setShowLogo(false); // esconde logo se sair do modo pro
+      setShowLogo(false);
     }
   }, [theme]);
 
+  // Alterna tema
   const changeTheme = () => setTheme(prev => (prev === "noob" ? "pro" : "noob"));
+
+  // Validação de login fake
+  const handleLogin = () => {
+    const user = document.getElementById("nameInput").value;
+    const pass = document.getElementById("passInput").value;
+
+    if (user === USER && pass === PASS) {
+      alert("Login realizado com sucesso!");
+      setLocation("/dashboard");
+    } else {
+      alert("Usuário ou senha inválidos.");
+    }
+  };
 
   return (
     <>
@@ -76,8 +96,15 @@ function Inicio() {
           placeholder="Digite a sua senha"
           autoComplete="new-password"
         />{" "}
-        <br /> <br />
-        <button id="send-btn">Entrar</button>
+        <br />
+        <br />
+        <button id="send-btn" onClick={handleLogin}>
+          Entrar
+        </button>
+
+        <p>
+          Esqueceu a sua senha? <br /> <a href="/forget">Recuperar Senha</a>
+        </p>
       </div>
 
       <div className="transform-btn">
@@ -90,8 +117,10 @@ function Inicio() {
       {/* Logo com delay + fade-in */}
       {theme === "pro" && (
         <div className={`logo-container ${showLogo ? "visible" : ""}`}>
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
-          <p>SkyZ Design © 2025 All rights reserved</p>
+          <a href="http://www.skyzdesign.com.br">
+            <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
+            <p>SkyZ Design © 2025 All rights reserved</p>
+          </a>
         </div>
       )}
     </>
