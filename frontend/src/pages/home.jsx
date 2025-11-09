@@ -114,6 +114,15 @@ function Inicio() {
         </button>
       </div>
 
+      {theme === "noob" && (
+        <div className={`logo-container ${showLogo ? "visible" : ""}`}>
+          <a href="http://www.skyzdesign.com.br">
+            <img src={`${process.env.PUBLIC_URL}/logo2.0.png`} alt="Logo2" />
+            <p>Grow Design © 2025 All rights reserved</p>
+          </a>
+        </div>
+      )}
+
       {/* Logo com delay + fade-in */}
       {theme === "pro" && (
         <div className={`logo-container ${showLogo ? "visible" : ""}`}>
@@ -123,6 +132,9 @@ function Inicio() {
           </a>
         </div>
       )}
+
+      
+
     </>
   );
 }
