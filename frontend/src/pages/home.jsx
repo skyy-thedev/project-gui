@@ -61,6 +61,10 @@ function Inicio() {
     }
   };
 
+    const board = () => {
+      setLocation("/dashboard");
+    };
+
   return (
     <>
       <div className="stars">
@@ -114,14 +118,12 @@ function Inicio() {
         </button>
       </div>
 
-      {theme === "noob" && (
-        <div className={`logo-container ${showLogo ? "visible" : ""}`}>
-          <a href="http://www.skyzdesign.com.br">
-            <img src={`${process.env.PUBLIC_URL}/logo2.0.png`} alt="Logo2" />
-            <p>Grow Design © 2025 All rights reserved</p>
-          </a>
-        </div>
-      )}
+      <div className="dash-container">
+        <button onClick={board}>Dashboard</button>
+      </div>
+        
+      
+      
 
       {/* Logo com delay + fade-in */}
       {theme === "pro" && (
@@ -133,6 +135,14 @@ function Inicio() {
         </div>
       )}
 
+      {theme === "noob" && (
+        <div className={`logo-container ${showLogo ? "visible" : ""}`}>
+          <a href="http://www.skyzdesign.com.br">
+            <img src={`${process.env.PUBLIC_URL}/logo2.0.png`} alt="Logo2" />
+            <p>Grow Design © 2025 All rights reserved</p>
+          </a>
+        </div> 
+      )}
       
 
     </>

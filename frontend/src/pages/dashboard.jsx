@@ -1,5 +1,5 @@
 import { useLocation } from "wouter";
-
+import '../styles/dashboard.css';
 function Dashboard() {
 
    const [, setLocation] = useLocation();
@@ -9,10 +9,15 @@ function Dashboard() {
    }
 
    return (
-    <>
-        <h1>Parabéns, você conseguiu fazer login com sucesso!</h1>
-        <button onClick={retornar}>Clique aqui para retornar!</button>
-    </>
+        <div className="dashboard"> 
+            <div className="header">
+            <h1>Histórico</h1>
+            <h1>Cadastrar</h1>
+            <h1 className= "exit" onClick={retornar}>Sair</h1>
+
+            </div>
+        </div>
+        
    );
 }
 
