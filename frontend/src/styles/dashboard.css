@@ -1,34 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
-
-.dashboard h1{
-    color:black;
-    text-align: center;
-    display:flex;
+body {
+    align-items: center;
+    margin: 0 auto;
 }
+
 .header {
-background-color: rgba(51, 211, 81, 0.843);
-width: 100vw;
-height: 80px;
-display: flex;
-flex-direction: row;
-gap: 3vh;
-font-family: 'Rajdhani';
-justify-content: right;
-padding-right: 10vh;
+    background-color: rgba(55, 55, 55, 0.843);
+    width: 90vw;
+    height: 8vh;
+    font-family: 'Rajdhani';
+    padding: 1vh 5vw;
+    overflow: hidden;
+    margin-bottom: 5vh;
 }
 
-.header h1 {
-    padding-top: 25px;
-    color: black;
-    font-size: 24px;
-}
-
-.exit{
-    
+.header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 11vw;
+    gap: 3vh;
     cursor: pointer;
 }
 
-.exit:hover{
-     transform: translateY(-3px);
+.header nav p {
+    padding-top: 2vh;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.header nav p:hover {
+    transform: translateY(-0.7vh);
+    color: wheat;
+}
+
+.exibeContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    background-color: rgb(46, 46, 46);
+    border-radius: 15px;
+    border: 2px solid black;
+    width: 70vw;
+    height: 80vh;
+    color: white;
 }

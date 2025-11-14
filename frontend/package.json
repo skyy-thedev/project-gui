@@ -1,6 +1,6 @@
 {
-  "name": "inicio",
-  "version": "0.1.0",
+  "name": "sistema-de-cadastros",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
