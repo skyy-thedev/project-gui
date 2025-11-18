@@ -57,11 +57,10 @@ function Inicio() {
         ))}
       </div>
 
-      <div className="dash-container">
-        <button onClick={board}>Atalho</button>
-      </div>
-
       <div className="login">
+          <div className="dash-container">
+            <button onClick={board}>Go to dashboard → </button>
+          </div>
         <h1>Acesse sua conta</h1>
         <label htmlFor="nameInput">Usuário:</label> <br />
         <input

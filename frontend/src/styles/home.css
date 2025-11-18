@@ -85,8 +85,6 @@ body::after {
   position: relative;
   background: #D9DFE8;
   color: #2A2A2A;
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
   border-radius: 22px;
   width: 80vw;
   padding: 1rem;
@@ -159,29 +157,29 @@ input:-webkit-autofill {
 
 
 .dash-container {
-  display: flex;
   position: relative;
   width: 100%;
   height: auto;
-  padding: 3vh 0;
 }
 
 .dash-container button{
-  background: linear-gradient(90deg, #4A90E2, #1F2A48);
+  display: flex;
+  background: radial-gradient(#4A90E2, #1F2A48);
   color: white ;
   text-align: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
-  width: 25vw;
+  font-weight: 100;
+  width: 40vw;
   height: auto;
   border: none;
-  border-radius: 15px;
+  border-radius: 22px;
   padding: 1vh;
+  justify-self: center;
   transition: all 0.1s ease;
   cursor: pointer;
-  margin: 0 auto;
-  filter: drop-shadow(1px 1px 2px #2a2a2a);
+  box-shadow: 1px 1px 2px #2a2a2a;
 }
 
 .logo-container {
@@ -209,11 +207,6 @@ input:-webkit-autofill {
   width: 100%;
   height: auto;
   margin-top: 10vh;
-  /* Neon arroxeado */
-  filter:
-    drop-shadow(0 0 6px #4A90E2)
-    drop-shadow(0 0 12px #1F2A48)
-    drop-shadow(0 0 18px #A68CFF);
   transition: filter 0.3s ease;
   animation: neonPulse 2.5s infinite alternate;
 }
@@ -225,12 +218,6 @@ input:-webkit-autofill {
     drop-shadow(0 0 6px #4A90E2)
     drop-shadow(0 0 12px #1F2A48)
     drop-shadow(0 0 18px #A68CFF);
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 8px #4A90E2)
-      drop-shadow(0 0 16px #1F2A48)
-      drop-shadow(0 0 24px #A68CFF);
   }
   100% {
     filter:
@@ -341,8 +328,6 @@ body::after {
   background: #D9DFE8;
   color: #2A2A2A;
   border: 1px solid #4A90E2;
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
   border-radius: 20px;
   width: 40vw;
   padding: 2rem;
@@ -414,8 +399,8 @@ input:-webkit-autofill {
 #send-btn {
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  width: 6rem;
-  height: 3rem;
+  width: 15vw;
+  height: 5vh;
   border-radius: 15px;
   border: 1px solid #4A90E2;
   background: linear-gradient(90deg, #4A90E2, #1F2A48);
@@ -424,9 +409,8 @@ input:-webkit-autofill {
 
 
 .dash-container {
-  display: flex;
   position: relative;
-  width: 7vw;
+  width: 100%;
   height: auto;
 }
 
@@ -436,21 +420,22 @@ input:-webkit-autofill {
   color: white ;
   text-align: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
-  width: 6vw;
+  font-weight: 100;
+  width: 12vw;
   height: auto;
   border: none;
-  border-radius: 15px;
+  border-radius: 22px;
   padding: 1vh;
-  margin: 0 auto;
+  justify-self: right;
   transition: all 0.1s ease;
   cursor: pointer;
-  filter: drop-shadow(1px 1px 2px #2a2a2a);
+  box-shadow: 1px 1px 2px #2a2a2a;
 }
 
 .dash-container button:hover{
-    filter: drop-shadow(1px 3px 5px #2a2a2a);
+    box-shadow: 1px 3px 5px #2a2a2a;
     transform: scale(1.05);
 }
 
@@ -465,25 +450,21 @@ input:-webkit-autofill {
   transition: opacity 1s ease-in-out;
   cursor: pointer;
   text-decoration: none;
+  align-content: center;
 }
 
 
 .logo-container p {
-  margin-top: -3vh;
-  margin-bottom: -10vh;
-  width: 16vw;
-  margin-left: -6vh;
+  padding: 1vh;
+  width: 9vw;
+  margin-bottom: -5vh;
 }
 
 .logo-container img {
   width: 100%;
   height: auto;
-  margin-top: 10vh;
-  /* Neon arroxeado */
-  filter:
-    drop-shadow(0 0 6px #4A90E2)
-    drop-shadow(0 0 12px #1F2A48)
-    drop-shadow(0 0 18px #A68CFF);
+  margin-top: 5vh;
+  margin-bottom: -5vh;
   transition: filter 0.3s ease;
   animation: neonPulse 2.5s infinite alternate;
 }
@@ -495,12 +476,6 @@ input:-webkit-autofill {
     drop-shadow(0 0 6px #4A90E2)
     drop-shadow(0 0 12px #1F2A48)
     drop-shadow(0 0 18px #A68CFF);
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 8px #4A90E2)
-      drop-shadow(0 0 16px #1F2A48)
-      drop-shadow(0 0 24px #A68CFF);
   }
   100% {
     filter:
@@ -608,11 +583,9 @@ body::after {
 /* ================= CARD DE LOGIN ================= */
 .login {
   position: relative;
-  background: #D9DFE8;
+  background: #d9dfe8;
   color: #2A2A2A;
   border: 1px solid #4A90E2;
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
   border-radius: 20px;
   width: 40vw;
   padding: 2rem;
@@ -628,7 +601,7 @@ body::after {
 
 .login p {
   padding-top: 25px;
-  font-size: 12px;
+  font-size: 1rem;
 }
 
 .login a {
@@ -641,7 +614,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  font-weight: bold;
 }
 
 /* ================= INPUTS ================= */
@@ -669,36 +642,31 @@ input:-webkit-autofill {
 }
 
 /* ================= BOTÕES ================= */
-#send-btn, #btn-to-transform {
+/* BOTÃO ENVIAR */
+#send-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
   cursor: pointer;
-  font-weight: 600;
   color: white;
   border-radius: 25px;
   box-shadow: 0 0 8px #1f2a4860;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   backface-visibility: hidden;
   will-change: transform, box-shadow;
-}
-
-/* BOTÃO ENVIAR */
-#send-btn {
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 1px;
-  width: 6rem;
-  height: 3rem;
+  width: 10vw;
+  height: 5vh;
   border-radius: 15px;
   border: 1px solid #4A90E2;
   background: linear-gradient(90deg, #4A90E2, #1F2A48);
 }
-#send-btn:hover { transform: translateY(-3px); box-shadow: 0 0 20px #4A90E2; }
+#send-btn:hover { transform: scale(1.08); box-shadow: 2px 2px 20px #4A90E2; }
 
 
 .dash-container {
-  display: flex;
   position: relative;
-  width: 7vw;
+  width: 100%;
   height: auto;
-  margin-bottom: 5vh;
 }
 
 .dash-container button{
@@ -707,21 +675,22 @@ input:-webkit-autofill {
   color: white ;
   text-align: center;
   justify-content: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.8rem;
-  width: 6vw;
+  font-weight: 100;
+  width: 10vw;
   height: auto;
   border: none;
-  border-radius: 15px;
-  padding: 1vh;
-  margin: 0 auto;
+  border-radius: 22px;
+  padding: 0.7vh;
+  justify-self: right;
   transition: all 0.1s ease;
   cursor: pointer;
-  filter: drop-shadow(1px 1px 2px #2a2a2a);
+  box-shadow: 1px 1px 2px #2a2a2a;
 }
 
 .dash-container button:hover{
-    filter: drop-shadow(1px 3px 5px #2a2a2a);
+    box-shadow: 1px 3px 5px #2a2a2a;
     transform: scale(1.05);
 }
 
@@ -750,11 +719,6 @@ input:-webkit-autofill {
   width: 100%;
   height: auto;
   margin-top: 10vh;
-  /* Neon arroxeado */
-  filter:
-    drop-shadow(0 0 6px #4A90E2)
-    drop-shadow(0 0 12px #1F2A48)
-    drop-shadow(0 0 18px #A68CFF);
   transition: filter 0.3s ease;
   animation: neonPulse 2.5s infinite alternate;
 }
@@ -766,12 +730,6 @@ input:-webkit-autofill {
     drop-shadow(0 0 6px #4A90E2)
     drop-shadow(0 0 12px #1F2A48)
     drop-shadow(0 0 18px #A68CFF);
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 8px #4A90E2)
-      drop-shadow(0 0 16px #1F2A48)
-      drop-shadow(0 0 24px #A68CFF);
   }
   100% {
     filter:
@@ -883,8 +841,6 @@ body::after {
   background: #D9DFE8;
   color: #2A2A2A;
   border: 1px solid #4A90E2;
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  backdrop-filter: blur(10px) saturate(140%);
   border-radius: 20px;
   width: 40vw;
   padding: 2rem;
@@ -913,7 +869,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: #2A2A2A;
 }
 
 /* ================= INPUTS ================= */
@@ -1023,11 +979,6 @@ input:-webkit-autofill {
   width: 100%;
   height: auto;
   margin-top: 10vh;
-  /* Neon arroxeado */
-  filter:
-    drop-shadow(0 0 6px #4A90E2)
-    drop-shadow(0 0 12px #1F2A48)
-    drop-shadow(0 0 18px #A68CFF);
   transition: filter 0.3s ease;
   animation: neonPulse 2.5s infinite alternate;
 }
@@ -1039,12 +990,6 @@ input:-webkit-autofill {
     drop-shadow(0 0 6px #4A90E2)
     drop-shadow(0 0 12px #1F2A48)
     drop-shadow(0 0 18px #A68CFF);
-  }
-  50% {
-    filter:
-      drop-shadow(0 0 8px #4A90E2)
-      drop-shadow(0 0 16px #1F2A48)
-      drop-shadow(0 0 24px #A68CFF);
   }
   100% {
     filter:
