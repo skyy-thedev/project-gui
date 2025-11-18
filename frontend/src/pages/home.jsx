@@ -57,6 +57,10 @@ function Inicio() {
         ))}
       </div>
 
+      <div className="dash-container">
+        <button onClick={board}>Atalho</button>
+      </div>
+
       <div className="login">
         <h1>Acesse sua conta</h1>
         <label htmlFor="nameInput">Usuário:</label> <br />
@@ -83,10 +87,6 @@ function Inicio() {
         <p>
           Esqueceu a sua senha? <br /> <a href="/forget">Recuperar Senha</a>
         </p>
-      </div>
-
-      <div className="dash-container">
-        <button onClick={board}>Dashboard</button>
       </div>
 
         {/* Logo com delay + fade-in */}

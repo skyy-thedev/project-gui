@@ -16,7 +16,7 @@ export default function Sidebar({ onSelect }) {
     { icon: <FiHome size={30} />, label: "Dashboard", action: () => onSelect("dashboard") },
     { icon: <FiUser size={30} />, label: "Cadastro", action: () => onSelect("cadastro") },
     { icon: <FiBook size={30} />, label: "Historico", action: () => onSelect("historico") },
-    { icon: <FiBarChart2 size={30} />, label: "Resumo", action: () => onSelect("resumo") },
+    { icon: <FiBarChart2 size={30} />, label: "Analytics", action: () => onSelect("Analytics") },
     { icon: <FiLogOut size={30} />, label: "Logout", action: logout },
   ];
 

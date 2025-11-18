@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar.jsx';
 import DashboardHome from "../components/DashboardHome";
 import CadastroAlunos from "../components/CadastroAlunos";
 import Historico from "../components/Historico";
-import Resumo from "../components/Resumo";
+import Analytics from "../components/Analytics";
 import '../styles/dashboard.css';
 
 
@@ -20,8 +20,8 @@ function Dashboard() {
                 return <CadastroAlunos />;
             case "historico":
                 return <Historico />;
-            case "resumo":
-                return <Resumo />;
+            case "Analytics":
+                return <Analytics />;
             default:
                 return <DashboardHome />;
             }
