@@ -1,28 +1,15 @@
 import { useEffect, useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
 import { useLocation } from "wouter";
+import logoIdentyFlow from '../assets/pngs/Sublogo IdentifyFlow Branco.png'
+import '../styles/home.css';
 
 function Inicio() {
-  const [theme, setTheme] = useState("noob");
   const [stars, setStars] = useState([]);
-  const [showLogo, setShowLogo] = useState(false);
   const [, setLocation] = useLocation();
 
   // Constantes temporárias para simular login
   const USER = "admin";
   const PASS = "1234";
-
-  // Alterna tema
-  useEffect(() => {
-    const existingLink = document.getElementById("tema-css");
-    if (existingLink) existingLink.remove();
-
-    const link = document.createElement("link");
-    link.id = "tema-css";
-    link.rel = "stylesheet";
-    link.href = `${process.env.PUBLIC_URL}/${theme}.css`;
-    document.head.appendChild(link);
-  }, [theme]);
 
   // Gera estrelas apenas uma vez
   useEffect(() => {
@@ -34,19 +21,6 @@ function Inicio() {
     }));
     setStars(newStars);
   }, []);
-
-  // Delay para exibir o logo
-  useEffect(() => {
-    if (theme === "pro") {
-      const timer = setTimeout(() => setShowLogo(true), 1200);
-      return () => clearTimeout(timer);
-    } else {
-      setShowLogo(false);
-    }
-  }, [theme]);
-
-  // Alterna tema
-  const changeTheme = () => setTheme(prev => (prev === "noob" ? "pro" : "noob"));
 
   // Validação de login fake
   const handleLogin = () => {
@@ -84,8 +58,8 @@ function Inicio() {
       </div>
 
       <div className="login">
-        <h1>Login</h1>
-        <label htmlFor="nameInput">User:</label> <br />
+        <h1>Acesse sua conta</h1>
+        <label htmlFor="nameInput">Usuário:</label> <br />
         <input
           id="nameInput"
           type="text"
@@ -93,7 +67,7 @@ function Inicio() {
           autoComplete="off"
         />{" "}
         <br />
-        <label htmlFor="passInput">Password:</label> <br />
+        <label htmlFor="passInput">Senha:</label> <br />
         <input
           id="passInput"
           type="password"
@@ -111,40 +85,28 @@ function Inicio() {
         </p>
       </div>
 
-      <div className="transform-btn">
-        <button id="btn-to-transform" onClick={changeTheme}>
-          {theme === "noob" ? <FaMoon /> : <FaSun />}
-          <span> MUDAR TEMA</span>
-        </button>
-      </div>
-
       <div className="dash-container">
         <button onClick={board}>Dashboard</button>
       </div>
-        
-      
-      
 
-      {/* Logo com delay + fade-in */}
-      {theme === "pro" && (
-        <div className={`logo-container ${showLogo ? "visible" : ""}`}>
+        {/* Logo com delay + fade-in */}
+        <div className='logo-container' >
+          <a href="http://www.identyflow.com.br">
+            <img src={logoIdentyFlow} alt="Logo" />
+            <p>SkyZ Design © 2025 All rights reserved</p>
+          </a>
+        </div>
+        
+
+      {/* Logo com delay + fade-in
+              <div className='logo-container' >
           <a href="http://www.skyzdesign.com.br">
             <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" />
             <p>SkyZ Design © 2025 All rights reserved</p>
           </a>
         </div>
-      )}
-
-      {theme === "noob" && (
-        <div className={`logo-container ${showLogo ? "visible" : ""}`}>
-          <a href="http://www.skyzdesign.com.br">
-            <img src={`${process.env.PUBLIC_URL}/logo2.0.png`} alt="Logo2" />
-            <p>Grow Design © 2025 All rights reserved</p>
-          </a>
-        </div> 
-      )}
       
-
+      */}
     </>
   );
 }
