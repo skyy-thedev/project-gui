@@ -1,0 +1,150 @@
+.adduser-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  width: 100%;
+  color: white;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.adduser-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+form {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px #4A90E2;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+input {
+  text-align: center;
+  width: 93%;
+}
+
+input,
+select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 12px #4A90E2;
+}
+
+.readonly {
+  background: rgba(255,255,255,0.08);
+}
+
+.btn-save-user {
+  width: 100%;
+  background: linear-gradient(135deg, #4A90E2, #7b5dfa);
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+  box-shadow: 0 0 10px #4A90E2;
+}
+
+.btn-save-user:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px #4A90E2;
+}
+
+/* OVERLAY */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.65);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease-in-out;
+  z-index: 999;
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: rgba(20,20,30,0.95);
+  padding: 5vh;
+  border-radius: 12px;
+  width: 30vw;
+  max-height: 85vh;
+  color: white;
+  overflow-y: hidden;
+  box-shadow: 0 0 20px #4A90E2;
+  position: relative;
+  animation: scaleIn 0.25s ease;
+}
+
+/* BOTÃO X */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    transform: scale(0.85); 
+    opacity: 0; 
+  }
+  to { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}

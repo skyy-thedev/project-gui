@@ -1,5 +1,25 @@
 .landing {
     display: flex;
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
     flex-direction: row;
-    margin-left: 6vh;
+    overflow-x: hidden;
+    justify-content: center;
+
+    /* 🎨 Fundo vidro azul translúcido */
+    background: rgba(0, 120, 255, 0.15); 
+
+    /* 🔵 Borda suave */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #e8f4ff;
+    border-radius: 25px;
+    padding: 2vh;
+
+    width: 91.3vw;
+    height: 81.5vh;
+
+    /* ✨ Efeito extra opcional: glow azul muito suave */
+    box-shadow: 0 8px 20px rgba(0, 150, 255, 0.15);
 }

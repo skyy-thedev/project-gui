@@ -498,7 +498,7 @@ input:-webkit-autofill {
 
 }
 
-@media screen and (min-width:1368px) and (max-width: 1920px) {
+@media (min-width:1368px) and (max-width: 1920px) {
   /* ================= BASE ================= */
 body {
   background: radial-gradient(circle at 20% 20%, #0c101c, #1F2A48 80%);
@@ -592,6 +592,7 @@ body::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 0.8s ease forwards;
   transform-style: preserve-3d;
+  justify-items: center;
 }
 
 .login:hover {
@@ -617,25 +618,33 @@ a:hover {
   font-weight: bold;
 }
 
-/* ================= INPUTS ================= */
-input {
+.login form {
   text-align: center;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  width: 20vw;
+}
+
+.login form input {
   border: 1px solid #4A90E2;
   border-radius: 12px;
   background: #F5F7FA;
   color: #2A2A2A;
-  padding: 12px 15px;
-  margin: 12px 0;
   outline: none;
   font-size: 1rem;
   font-weight: 500;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-input::placeholder { color: #2a2a2a5e; }
-input:hover { border-color: #4A90E2; box-shadow: 0 0 6px #1f2a484f; }
-input:focus { border-color: #4A90E2; box-shadow: 0 0 10px #1f2a48c4; }
-input:-webkit-autofill {
+
+.login form label {
+  margin-bottom: -1vh;
+}
+
+.login form input::placeholder { color: #2a2a2ad8; } 
+.login form input:hover { border-color: #4A90E2; box-shadow: 0 0 6px #1f2a484f; }
+.login form input:focus { border-color: #4A90E2; box-shadow: 0 0 10px #1f2a48c4; }
+.login form input:-webkit-autofill {
   box-shadow: 0 0 0px 1000px #1f2a4862 inset !important;
   -webkit-text-fill-color: white !important;
   caret-color: white !important;
@@ -659,6 +668,7 @@ input:-webkit-autofill {
   border-radius: 15px;
   border: 1px solid #4A90E2;
   background: linear-gradient(90deg, #4A90E2, #1F2A48);
+  margin: 0 auto;
 }
 #send-btn:hover { transform: scale(1.08); box-shadow: 2px 2px 20px #4A90E2; }
 
@@ -718,7 +728,7 @@ input:-webkit-autofill {
 .logo-container img {
   width: 100%;
   height: auto;
-  margin-top: 10vh;
+  margin-top: 5vh;
   transition: filter 0.3s ease;
   animation: neonPulse 2.5s infinite alternate;
 }

@@ -1,0 +1,106 @@
+.dash-header {
+  position: fixed;
+  top: 0;
+  left: 5vw;
+  width: 92.2vw;
+  height: 12vh;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #F5F7FA;
+  color: #2a2a2a;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+
+  z-index: 999;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* LEFT BUTTONS */
+.dash-left {
+  display: flex;
+}
+
+.dash-btn {
+  background: #4A90E2;
+  box-shadow: 1px 1px 5px #2a2a2a;
+  color: white;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.dash-btn:hover {
+  background: rgba(0, 119, 255, 0.969);
+  transform: scale(1.03);
+}
+
+/* CENTER WELCOME */
+.dash-center {
+  text-align: center;
+  margin: 2vh -5vh -1vh 5vh;
+}
+
+.dash-center h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.dash-center .user-role {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* RIGHT USER INFO */
+.dash-right {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  gap: 12px;
+}
+
+.dash-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4A90E2;
+}
+
+.dash-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.dash-info .name {
+  font-weight: 700;
+}
+
+.dash-info .role {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .dash-header {
+    left: 0;
+    width: 100vw;
+  }
+
+  .dash-left {
+    display: none;
+  }
+
+  .dash-center h1 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,78 @@
+.cursos-container {
+  padding: 25px;
+  color: white;
+}
+
+.cursos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cursos-table th,
+.cursos-table td {
+  padding: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.cursos-table th {
+  background: rgba(255,255,255,0.1);
+  text-align: left;  
+}
+
+.btn-add-curso {
+  background-color: #4a90e2;
+  padding: 12px 22px;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+  box-shadow: 0 0 10px #7a4fff80;
+}
+
+.btn-add-curso:hover {
+  transform: scale(1.03);
+}
+
+.addcurso-container {
+  padding: 10px;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, select {
+  width: 90%;
+  padding: 12px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: white;
+}
+
+.btn-save-curso {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #5b2be8, #7a4fff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
+.btn-delete {
+  width: 5vw;
+  margin-left: 2vh;
+  padding: 1vh;
+  background-color: #E45454;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+}
